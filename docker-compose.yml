@@ -1,0 +1,12 @@
+services:
+  wallet:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - wallet_data:/data
+    environment:
+      - WALLET_DB_PATH=/data/wallet.db
+
+volumes:
+  wallet_data:
